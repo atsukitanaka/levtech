@@ -16,4 +16,10 @@ class PostController extends Controller
     {
          return view('posts/index')->with(['posts' => $post->getPaginateByLimit(1)] );//$postの中身を戻り値にする。
     }
+    
+    public function show(Post $post)
+    {
+        dd($post);
+    }
 }
+
