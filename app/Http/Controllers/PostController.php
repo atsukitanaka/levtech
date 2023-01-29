@@ -19,7 +19,12 @@ class PostController extends Controller
     
     public function show(Post $post)
     {
-        dd($post);
+        return view('post/show'->with(['post' => $post]));
+    }
+    
+    public function create()
+    {
+        return view('posts/create');
     }
 }
 
